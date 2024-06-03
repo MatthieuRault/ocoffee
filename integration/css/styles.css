@@ -1,5 +1,7 @@
 body {
   margin: 2rem;
+  background: linear-gradient(180deg, #d9b99b 0%, #39241b 100%);
+  color: #faf5ea;
 }
 
 .navbar {
@@ -14,8 +16,7 @@ h1, h2, h3, .logo-para {
 }
 
 .nav-list {  
-  display: flex;
-  border: 1px solid black;
+  display: flex;  
   padding-right: 1.5rem; 
 }
 
@@ -47,6 +48,7 @@ h1, h2, h3, .logo-para {
 
 .image-about {
   width: 20rem;
+  border-radius: 10% / 50%;
 }
 
 .product-list {
@@ -56,13 +58,22 @@ h1, h2, h3, .logo-para {
 }
 
 .product-card {
-  width: 33%;
-  border: 1px solid black;
+  width: 33%;      
+}
+
+.product-card, .product-image, .button-catalogue, .card-button {
+  border-radius: 30px;
+  border-color: beige;
+  box-shadow: 3px 3px rgba(226, 182, 117, 0.938), -.2em 0 .2em rgb(126, 76, 1);
+}
+
+.button-catalogue, .card-button {
+  font-weight: bold;
 }
 
 .product-image {
   width: 100%;
-  height: AUTO;
+  height: AUTO; 
 }
 
 .product-title {
@@ -81,7 +92,7 @@ h1, h2, h3, .logo-para {
 .button-catalogue {
   margin-top: 1rem ;
   background-color: beige;
-  padding: .5rem;
+  padding: .5rem;  
 }
 
 .card-footer {
@@ -92,11 +103,13 @@ h1, h2, h3, .logo-para {
 
 .card-button {
   justify-content: center;
-  margin: 1rem
+  margin: 1rem;
+  background-color: beige;  
+  padding: .5rem 5rem;
 }
 
 .banner {
-  background-image: url('../docs/demande-client/00.assets/coffees/cafe-1-kg.jpg');
+  background-image: url('../images/coffees/cafe-1-kg.jpg');
   background-size: cover;
   background-position: center;
   height: 200px;
@@ -164,6 +177,8 @@ h1, h2, h3, .logo-para {
   }
 
   .product-card {
-    width: 100%;
+    width: 100%;    
+    flex-direction: column;
+    margin: 1rem;
   }
 }
