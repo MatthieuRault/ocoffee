@@ -1,0 +1,169 @@
+body {
+  margin: 2rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1, h2, h3, .logo-para {
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+
+.nav-list {  
+  display: flex;
+  border: 1px solid black;
+  padding-right: 1.5rem; 
+}
+
+.nav-toggle, .nav-checkbox {
+  display: none;
+}
+
+.nav-item {
+  margin-left: 2rem;
+}
+
+.nav-link:hover {
+  background-color: #555;
+}
+
+.logo-container, .intro-focus {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 5rem;
+}
+
+.logo-para {
+  margin-left: 0.1rem;
+  color: rgb(102, 58, 0);
+}
+
+.image-about {
+  width: 20rem;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product-card {
+  width: 33%;
+  border: 1px solid black;
+}
+
+.product-image {
+  width: 100%;
+  height: AUTO;
+}
+
+.product-title {
+  text-align: center;
+}
+
+.intro-focus {  
+  justify-content: space-between;
+  position: relative;  
+}
+
+.intro-text {
+  text-align: left;
+}
+
+.button-catalogue {
+  margin-top: 1rem ;
+  background-color: beige;
+  padding: .5rem;
+}
+
+.card-footer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.card-button {
+  justify-content: center;
+  margin: 1rem
+}
+
+.banner {
+  background-image: url('../docs/demande-client/00.assets/coffees/cafe-1-kg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.catalog {
+  margin-top: 10rem;
+}
+
+
+@media screen and (max-width: 768px) {
+  body {
+    margin: 1rem;
+  }
+
+  h1, h2, h3, .intro-text {
+    text-align: center;
+  }
+
+  h1, h2, h3 {
+    padding-top: .5rem;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    border: none;
+    padding: 0;
+    display: none;
+  }
+
+  .nav-item {   
+    margin-bottom: 1rem;
+  }
+
+  .nav-toggle {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .nav-checkbox:checked + .nav-list {
+    display: flex;
+  }
+
+  .intro-focus {
+    flex-direction: column;
+    align-items: center;
+  }  
+
+  .image-about, .product-image {
+    width: 100%;
+  }
+
+  .button-catalogue {
+    margin: 1rem;
+  }
+
+  .product-card {
+    width: 100%;
+  }
+}
