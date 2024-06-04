@@ -125,6 +125,17 @@ h1, h2, h3, .logo-para {
   margin-top: 10rem;
 }
 
+footer p {
+  display: flex;
+  justify-content: center;
+}
+
+.img404 {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin: auto;  
+}
 
 @media screen and (max-width: 768px) {
   body {
@@ -206,6 +217,10 @@ header nav.expanded a {
 
 @media screen and (min-width: 769px) {
   #nav-toggle {
-  display: none;
+  display: none; 
+  }
+
+  footer p {
+    margin-top: 2rem;
   }
 }
