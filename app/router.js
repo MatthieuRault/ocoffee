@@ -15,4 +15,3 @@ router.get('/article', (req, res) => {
 });
 
 module.exports = router;
-
