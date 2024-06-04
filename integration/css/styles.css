@@ -20,10 +20,6 @@ h1, h2, h3, .logo-para {
   padding-right: 1.5rem; 
 }
 
-.nav-toggle, .nav-checkbox {
-  display: none;
-}
-
 .nav-item {
   margin-left: 2rem;
 }
@@ -150,12 +146,20 @@ h1, h2, h3, .logo-para {
     display: none;
   }
 
+  .nav-list.expanded {
+    display: flex !important;
+  }
+
   .nav-item {   
     margin-bottom: 1rem;
   }
 
-  .nav-toggle {
-    display: inline-block;
+  #nav-toggle {
+    background-color: inherit;
+    color: beige;  
+    height: 3rem;
+    padding: 0;
+    border: none;
     cursor: pointer;
   }
 
@@ -180,5 +184,28 @@ h1, h2, h3, .logo-para {
     width: 100%;    
     flex-direction: column;
     margin: 1rem;
+  }
+}
+
+@keyframes menu-slide-in {
+  from {
+    width:  0vw;
+    padding: 4rem 0rem;    
+  }
+}
+header nav.expanded ul {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 1rem;
+}
+
+header nav.expanded a {
+  color: inherit;
+}
+
+@media screen and (min-width: 769px) {
+  #nav-toggle {
+  display: none;
   }
 }
