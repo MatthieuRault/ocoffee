@@ -1,6 +1,9 @@
+require('dotenv').config();
+
 const express = require('express');
 const app = express();
-require('dotenv').config();
+const router = require('./app/router')
+
 
 // Configuration du moteur de rendu
 app.set('view engine', 'ejs');
@@ -9,17 +12,7 @@ app.set('views', 'app/views');
 // Configurer des routes statiques
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-  res.render('main/home');
-});
-
-app.get('/catalogue', (req, res) => {
-  res.render('main/catalog');
-});
-
-app.get('/article', (req, res) => {
-  res.render('main/detail');
-})
+app.use(router);
 
 app.use((req, res) => {
   res.status(404).render('error/404');
