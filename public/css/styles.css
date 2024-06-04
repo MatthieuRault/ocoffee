@@ -130,12 +130,40 @@ footer p {
   justify-content: center;
 }
 
+/* Page 404 */
+
+.page-404 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .img404 {
   display: block;
   justify-content: center;
   align-items: center;
-  margin: auto;  
+  margin: 1rem auto 2rem auto;
 }
+
+/* Page detail (article) */
+
+.article-unique, .article-unique .product-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.article-unique .product-list, .article-unique .product-card {
+  width: 100%;
+}
+
+.article-unique .product-card {
+  flex-direction: column ;
+}
+
+/* responsive max 768px */
 
 @media screen and (max-width: 768px) {
   body {
@@ -214,6 +242,8 @@ header nav.expanded ul {
 header nav.expanded a {
   color: inherit;
 }
+
+/* Responsive après 768px */
 
 @media screen and (min-width: 769px) {
   #nav-toggle {

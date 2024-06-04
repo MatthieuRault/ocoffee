@@ -17,9 +17,13 @@ app.get('/catalogue', (req, res) => {
   res.render('main/catalog');
 });
 
+app.get('/article', (req, res) => {
+  res.render('main/detail');
+})
+
 app.use((req, res) => {
   res.status(404).render('error/404');
-})
+});
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
