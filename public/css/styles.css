@@ -50,11 +50,11 @@ h1, h2, h3, .logo-para {
 .product-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .product-card {
-  width: 33%;      
+  width: 25%;      
 }
 
 .product-card, .product-image, .button-catalogue, .card-button {
