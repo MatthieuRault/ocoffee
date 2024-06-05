@@ -1,7 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+h1, h2 {
+  font-family: 'Nanum Brush Script', sans-serif;
+  font-size: 6rem;
+}
+
 body {
   margin: 2rem;
   background: linear-gradient(180deg, #d9b99b 0%, #39241b 100%);
   color: #faf5ea;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+}
+
+button {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
 }
 
 .navbar {
@@ -62,7 +77,7 @@ h1, h2, h3, .logo-para {
   text-align: center;
 }
 
-.product-card, .product-image, .button-catalogue, .card-button {
+.product-card, .product-image, .button-catalogue, .card-button, .gdn {
   border-radius: 30px;
   border-color: beige;
   box-shadow: inset -1px 3px 8px 5px #000000, 2px 5px 16px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
@@ -84,18 +99,29 @@ h1, h2, h3, .logo-para {
 }
 
 .intro-focus {  
-  justify-content: space-between;
-  position: relative;  
+  justify-content: space-around;
+  position: relative;
+}
+
+.section-title {
+  text-align: center;
 }
 
 .intro-text {
-  text-align: left;
+  text-align: center;
+  width: 50%;
+  justify-content: center;
 }
 
 .button-catalogue {
   margin-top: 1rem ;
   background-color: beige;
   padding: .5rem;  
+}
+
+.button-container {
+  width: 100%;
+  text-align: center;
 }
 
 .card-footer {
@@ -167,6 +193,22 @@ footer p {
   flex-direction: column ;
 }
 
+/* Page à propos */
+
+.about-page h2 {
+  text-align: center;
+}
+
+.about-page p {
+  padding:0.2rem;
+}
+
+.gdn {
+  display: block;
+  margin: 2rem auto;
+  width: 30%;
+}
+
 /* responsive max 768px */
 
 @media screen and (max-width: 768px) {
@@ -189,9 +231,7 @@ footer p {
     display: none;
   }
 
-  .nav-list.expanded {
-    display: flex !important;
-  }
+
 
   .nav-item {   
     margin-bottom: 1rem;
@@ -229,6 +269,10 @@ footer p {
     margin: 1rem;
   }
 
+  .gdn {
+    min-width : 90%;
+    margin: 3rem 1.5rem;
+  }
   
 }
 

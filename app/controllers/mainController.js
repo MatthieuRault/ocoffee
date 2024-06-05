@@ -8,7 +8,7 @@ const mainController = {
       res.render("main/home", { coffees });
     } catch (error) {
       console.error(error);
-      res.status(500).render('500');
+      res.status(500).render('error/500');
     }
   },
   catalogPage: async (req, res) => {
@@ -18,7 +18,7 @@ const mainController = {
       res.render("main/catalog", { randomCoffees });
     } catch (error) {
       console.error(error);
-      res.status(500).render('500');
+      res.status(500).render('error/500');
     }
   },
   coffeeDetailsPage: async (req, res) => {
@@ -29,7 +29,14 @@ const mainController = {
       res.render("main/detail", { coffee });
     } catch (error) {
       console.error(error);
-      res.status(500).render('500');
+      res.status(500).render('error/500');
+    }
+  },
+  aboutPage: (req, res) => {
+    try {
+      res.render('main/about');
+    } catch (error) {
+      console.error(500).render('error/500');
     }
   }
 };
