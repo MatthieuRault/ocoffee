@@ -3,12 +3,13 @@
   <div class="product-list">
     <article class="product-card">
       <header class="card-header">
-        <img class="product-image" src="/images/coffees/100955890.png" alt="Café 1" />
-        <h3 class="product-title">Café d'Italie : Espresso</h3>
+        <img class="product-image detail" src="/images/coffees/<%= coffee.reference %>.png" alt="<%= coffee.name %>"/>
+        <h3 class="product-title">Café <%= coffee.origin %> : <%= coffee.name %></h3>
       </header>
       <section class="card-content">
-        <p>Café fort et concentré préparé en faisant passer de l'eau chaude à travers du café finement moulu.</p>
-      </section>      
+        <p><%= coffee.description %></p>
+      </section>
+      <a href="/catalogue" class="button">Retour au catalogue</a>     
     </article>
 </main>
 <%- include ('../partials/footer') %>

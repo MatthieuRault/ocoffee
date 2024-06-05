@@ -4,48 +4,22 @@
     <h1 class="banner-title">NOTRE CATALOGUE</h1>
   </div>
   <div class="product-list catalog">
-    <article class="product-card">
-      <header class="card-header">
-        <img class="product-image" src="images/coffees/100955890.png" alt="Café 1" />
-        <h3 class="product-title">Titre café 1</h3>
-      </header>
-      <section class="card-content">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti inventore assumenda cumque reprehenderit. Aut saepe ipsa fugiat repellat ratione, consequuntur esse corporis dicta voluptatum, porro, accusantium eius qui? Tenetur, quis?</p>
-      </section>
-      <footer class="card-footer">
-        <a href="article/1" target="_blank">
-          <button class="card-button">Découvrir</button>
-        </a>
-      </footer>
-    </article>
-    <article class="product-card">
-      <header class="card-header">
-        <img class="product-image" src="images/coffees/100955890.png" alt="Café 2" />
-        <h3 class="product-title">Titre café 2</h3>
-      </header>
-      <section class="card-content">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti inventore assumenda cumque reprehenderit. Aut saepe ipsa fugiat repellat ratione, consequuntur esse corporis dicta voluptatum, porro, accusantium eius qui? Tenetur, quis?</p>
-      </section>
-      <footer class="card-footer">
-        <a href="article/1" target="_blank">
-          <button class="card-button">Découvrir</button>
-        </a>
-      </footer>
-    </article>
-    <article class="product-card">
-      <header class="card-header">
-        <img class="product-image" src="images/coffees/100955890.png" alt="Café 3" />
-        <h3 class="product-title">Titre café 3</h3>
-      </header>
-      <section class="card-content">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti inventore assumenda cumque reprehenderit. Aut saepe ipsa fugiat repellat ratione, consequuntur esse corporis dicta voluptatum, porro, accusantium eius qui? Tenetur, quis?</p>
-      </section>
-      <footer class="card-footer">
-        <a href="article/1" target="_blank">
-          <button class="card-button">Découvrir</button>
-        </a>
-      </footer>
-    </article>
+    <% randomCoffees.forEach(random => { %>
+      <article class="product-card">
+        <header class="card-header">
+          <img class="product-image" src="images/coffees/<%= random.reference %>.png" alt="<%= random.name %>" />
+          <h3 class="product-title"><%= random.name %></h3>
+        </header>
+        <section class="card-content">
+          <p><%= random.description %></p>
+        </section>
+        <footer class="card-footer">
+          <a href="article/<%= random.id %>" target="_blank">
+            <button class="card-button">Découvrir</button>
+          </a>
+        </footer>
+      </article>
+    <% }) %>    
   </div>
   <button class="button-catalogue">Voir tous les produits</button>      
 </main>

@@ -45,6 +45,7 @@ h1, h2, h3, .logo-para {
 .image-about {
   width: 20rem;
   border-radius: 10% / 50%;
+  box-shadow: 5px 5px 19px 10px #000000;
 }
 
 .product-list {
@@ -57,10 +58,14 @@ h1, h2, h3, .logo-para {
   width: 25%;      
 }
 
+.card-content {
+  text-align: center;
+}
+
 .product-card, .product-image, .button-catalogue, .card-button {
   border-radius: 30px;
   border-color: beige;
-  box-shadow: 3px 3px rgba(226, 182, 117, 0.938), -.2em 0 .2em rgb(126, 76, 1);
+  box-shadow: inset -1px 3px 8px 5px #000000, 2px 5px 16px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 
 .button-catalogue, .card-button {
@@ -68,12 +73,14 @@ h1, h2, h3, .logo-para {
 }
 
 .product-image {
+  height: 20rem;
   width: 100%;
-  height: AUTO; 
+  object-fit: cover;
 }
 
 .product-title {
   text-align: center;
+  padding-top: .5rem;
 }
 
 .intro-focus {  
@@ -112,6 +119,8 @@ h1, h2, h3, .logo-para {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 5px 5px 19px 10px #000000;
+  border-radius: 20px;
 }
 
 .banner-title {
@@ -119,10 +128,6 @@ h1, h2, h3, .logo-para {
   font-weight: bold;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.catalog {
-  margin-top: 10rem;
 }
 
 footer p {
@@ -149,8 +154,7 @@ footer p {
 /* Page detail (article) */
 
 .article-unique, .article-unique .product-card {
-  display: flex;
-  justify-content: center;
+  display: flex;  
   align-items: center;
   height: 100vh;
 }
@@ -224,6 +228,8 @@ footer p {
     flex-direction: column;
     margin: 1rem;
   }
+
+  
 }
 
 @keyframes menu-slide-in {
@@ -252,5 +258,13 @@ header nav.expanded a {
 
   footer p {
     margin-top: 2rem;
+  }
+
+  .catalog {
+    margin-top: 10rem;
+  }
+  
+  .article-unique .product-card {
+    justify-content: center;
   }
 }
