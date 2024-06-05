@@ -1,17 +1,11 @@
 const express = require('express');
+const mainController = require("./controllers/mainController");
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.render('main/home');
-});
 
-router.get('/catalogue', (req, res) => {
-  res.render('main/catalog');
-});
-
-router.get('/article', (req, res) => {
-  res.render('main/detail');
-});
+router.get('/', mainController.homePage);
+router.get('/catalogue', mainController.catalogPage);
+router.get('/article/:id', mainController.coffeeDetailsPage);
 
 module.exports = router;
