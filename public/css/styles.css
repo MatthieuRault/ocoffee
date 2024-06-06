@@ -234,16 +234,19 @@ table {
 
 td {
   padding: 1rem;
-  border: 1px solid #39241b;
+  border: 1px solid #39241b;  
 }
 
 th {
   background-color: #39241b;
   color: #faf5ea;
   font-size: 1.3rem;
-  padding: 1rem;
-  text-align: left;
+  padding: 1rem;  
   border: 1px solid #39241b;
+}
+
+td, th {
+  text-align: center;
 }
 
 .basket {
@@ -253,8 +256,12 @@ th {
   margin-right: 1rem;
 }
 
-.h2-basket {
+.h2-basket, .link-catalog {
   text-align: center;
+}
+
+.link-catalog {
+  margin-top: 3rem
 }
 
 /* responsive max 768px */
