@@ -12,5 +12,6 @@ router.get('/article/:id', mainController.coffeeDetailsPage);
 
 router.get('/boutique', basketController.basketPage);
 router.get('/boutique/add/:id', basketController.addCoffeeToBasket);
+router.get('/boutique/delete/:id', basketController.removeCoffeeToBasket);
 
 module.exports = router;

@@ -11,8 +11,13 @@ const basketController = {
   addCoffeeToBasket: (req, res) => {
     const basketId = parseInt(req.params.id);
     req.session.basket.push(basketId);
-    res.redirect('basket')
-  }  
+    res.redirect('/boutique');
+  },
+  removeCoffeeToBasket: (req, res) => {
+    const coffeeIdToRemove = parseInt(req.params.id);
+    req.session.basket = req.session.basket.filter(coffeeId => coffeeId !== coffeeIdToRemove);
+    res.redirect('/boutique');
+  }
 }
 
 module.exports = basketController;

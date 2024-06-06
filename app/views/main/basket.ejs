@@ -1,29 +1,30 @@
 <%- include ('../partials/header') %>
 <main> 
-  <h2>Votre panier de café</h2>
+  <h2 class="h2-basket">Votre panier de café</h2>
   <table class="table">
     <thead>
       <tr>
         <th>Nom du café</th>
-        <th>Prix au kg</th>          
+        <th>Prix au kg</th>
+        <th></th>          
       </tr>
     </thead>
     <tbody>
       <% coffees.forEach(coffee => { %>        
         <tr>          
-          <td>
-            <img class="product-image" src="images/coffees/<%= coffee.reference %>.png" alt="<%= coffee.name %>" />
+          <td>            
             <div>
+              <img class="product-image basket" src="images/coffees/<%= coffee.reference %>.png" alt="<%= coffee.name %>" />
               <h3><%= coffee.name %></h3>
             </div>
           </td>
           
           <td>
-            <p><%= coffee.price %></p>
-          </td>          
+            <p><%= coffee.price_kg %> €</p>
+          </td>
           
           <td>
-            <a href="#">Enlever de la liste</a>
+            <a href="/boutique/delete/<%= coffee.id %>">Enlever de la liste</a>
           </td>
         </tr>
         <% }); %>
