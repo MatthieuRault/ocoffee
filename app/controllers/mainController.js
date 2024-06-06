@@ -38,6 +38,15 @@ const mainController = {
     } catch (error) {
       console.error(500).render('error/500');
     }
+  },
+  listCoffees: async (req, res) => {
+    try {
+      const coffees = await dataMapper.findAllCoffees();      
+      res.render('main/catalog', { coffees });
+    } catch (error) {
+      console.error(error);
+      res.status(500).render('error/500');
+    }
   }
 };
 

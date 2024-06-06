@@ -6,8 +6,12 @@ const router = express.Router();
 
 
 router.get('/', mainController.homePage);
+
 router.get('/catalogue', mainController.catalogPage);
+router.get('/catalogue/all-coffees', mainController.listCoffees);
+
 router.get('/about', mainController.aboutPage);
+
 router.get('/article/:id', mainController.coffeeDetailsPage);
 
 router.get('/boutique', basketController.basketPage);

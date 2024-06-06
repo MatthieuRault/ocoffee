@@ -7,14 +7,14 @@
     <% coffees.forEach(coffee => { %>
       <article class="product-card">
         <header class="card-header">
-          <img class="product-image" src="images/coffees/<%= coffee.reference %>.png" alt="<%= coffee.name %>" />
+          <img class="product-image" src="/images/coffees/<%= coffee.reference %>.png" alt="<%= coffee.name %>" />
           <h3 class="product-title"><%= coffee.name %></h3>
         </header>
         <section class="card-content">
           <p><%= coffee.description %></p>
         </section>
         <footer class="card-footer">
-          <a href="article/<%= coffee.id %>" target="_blank">
+          <a href="/article/<%= coffee.id %>" target="_blank">
             <button class="card-button">Découvrir</button>
           </a>
           <a href="/boutique/add/<%= coffee.id %>">+ Ajouter au panier</a>
@@ -22,8 +22,12 @@
       </article>
     <% }) %> 
   </div>
+  <% if(coffees.length-1 < 3){ %>
   <div class="button-container">
-    <button class="button-catalogue">Voir tous les produits</button>
-  </div>        
+    <a href="/catalogue/all-coffees">
+      <button class="button-catalogue">Voir tous les produits</button>
+    </a>
+  </div> 
+  <%}%>       
 </main>
 <%- include ('../partials/footer') %>

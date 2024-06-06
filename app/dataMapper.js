@@ -32,7 +32,7 @@ const dataMapper = {
   findCoffeesById: async (coffeeIds) => {
     const result = await client.query(`SELECT coffee.*, category.name AS cat_name, category.id AS cat_id
     FROM "coffee" JOIN "category" ON coffee.category_id = category.id
-    WHERE coffee.id = ANY($1::int[])`,
+    WHERE coffee.id = ANY($1::int[]) ORDER BY coffee.name ASC`,
    [coffeeIds]);
     const coffees = result.rows;
     return coffees;   
