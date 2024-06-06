@@ -98,9 +98,17 @@ h1, h2, h3, .logo-para {
   padding-top: .5rem;
 }
 
+.product-card a {
+  margin-top: 2rem;
+}
+
 .intro-focus {  
   justify-content: space-around;
   position: relative;
+}
+
+.intro-text, .top, .section-title, .container, #nav-toggle {
+  color: #6F4E37;
 }
 
 .section-title {
@@ -190,7 +198,8 @@ footer p {
 }
 
 .article-unique .product-card {
-  flex-direction: column ;
+  flex-direction: column;  
+  justify-content: center;
 }
 
 /* Page à propos */
@@ -217,7 +226,7 @@ footer p {
   }
 
   h1, h2, h3, .intro-text {
-    text-align: center;
+    text-align: center;    
   }
 
   h1, h2, h3 {
@@ -231,15 +240,12 @@ footer p {
     display: none;
   }
 
-
-
   .nav-item {   
     margin-bottom: 1rem;
   }
 
   #nav-toggle {
-    background-color: inherit;
-    color: beige;  
+    background-color: inherit;     
     height: 3rem;
     padding: 0;
     border: none;
@@ -267,6 +273,10 @@ footer p {
     width: 100%;    
     flex-direction: column;
     margin: 1rem;
+  }
+
+  .container footer p {
+    margin-top: 1rem;
   }
 
   .gdn {
@@ -306,9 +316,5 @@ header nav.expanded a {
 
   .catalog {
     margin-top: 10rem;
-  }
-  
-  .article-unique .product-card {
-    justify-content: center;
   }
 }
