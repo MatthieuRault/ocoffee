@@ -12,6 +12,7 @@ body {
   color: #faf5ea;
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.3rem;
+  min-height: 100vh;
 }
 
 button {
