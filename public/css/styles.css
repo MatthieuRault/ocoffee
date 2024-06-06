@@ -107,10 +107,6 @@ h1, h2, h3, .logo-para {
   position: relative;
 }
 
-.intro-text, .top, .section-title, .container, #nav-toggle {
-  color: #6F4E37;
-}
-
 .section-title {
   text-align: center;
 }
@@ -198,8 +194,11 @@ footer p {
 }
 
 .article-unique .product-card {
-  flex-direction: column;  
-  justify-content: center;
+  flex-direction: column;
+}
+
+.card-content li {
+  padding-top: 1rem;
 }
 
 /* Page à propos */
@@ -210,6 +209,10 @@ footer p {
 
 .about-page p {
   padding:0.2rem;
+}
+
+.intro-text, .top, .section-title, #nav-toggle, .nav-list {
+  color: #6F4E37;
 }
 
 .gdn {
@@ -316,5 +319,9 @@ header nav.expanded a {
 
   .catalog {
     margin-top: 10rem;
+  }
+
+  .article-unique .product-card {
+    justify-content: center;
   }
 }

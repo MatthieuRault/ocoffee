@@ -4,10 +4,17 @@
     <article class="product-card">
       <header class="card-header">
         <img class="product-image detail" src="/images/coffees/<%= coffee.reference %>.png" alt="<%= coffee.name %>"/>
-        <h3 class="product-title">Café <%= coffee.origin %> : <%= coffee.name %></h3>
+        <h3 class="product-title"><%= coffee.name %></h3>
       </header>
       <section class="card-content">
-        <p><%= coffee.description %></p>
+        <ul>
+          <li><%= coffee.description %></li>         
+          <li>Référence : <%= coffee.reference %></li>
+          <li>Origine du roduit : <%= coffee.origin %></li>
+          <li>Prix : <%= coffee.price_kg %> €/kg</li>
+          <li>Caractéristique rinciale : <%= coffee.cat_name %></li>
+          <li>Disonibilité : <%= coffee.available %></li>
+        </ul>
       </section>
       <a href="/catalogue" class="button">Retour au catalogue</a>     
     </article>
