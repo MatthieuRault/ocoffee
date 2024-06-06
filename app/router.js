@@ -11,5 +11,6 @@ router.get('/about', mainController.aboutPage);
 router.get('/article/:id', mainController.coffeeDetailsPage);
 
 router.get('/boutique', basketController.basketPage);
+router.get('/boutique/add/:id', basketController.addCoffeeToBasket);
 
 module.exports = router;
