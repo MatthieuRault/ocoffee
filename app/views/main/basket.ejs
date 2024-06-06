@@ -1,46 +1,33 @@
 <%- include ('../partials/header') %>
-<main>
-  <div class="container">
-    <h1 class="text-center my-5">Votre panier de café</h1>
-
-    <table class="table table-striped table-bordered">
-      <thead>
-        <tr>
-          <th>Nom du café</th>
-          <th>Prix au kg</th>
-          <th>Quantité</th>
-          <th>Prix total</th>
+<main> 
+  <h2>Votre panier de café</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nom du café</th>
+        <th>Prix au kg</th>          
+      </tr>
+    </thead>
+    <tbody>
+      <% coffees.forEach(coffee => { %>        
+        <tr>          
+          <td>
+            <img class="product-image" src="images/coffees/<%= coffee.reference %>.png" alt="<%= coffee.name %>" />
+            <div>
+              <h3><%= coffee.name %></h3>
+            </div>
+          </td>
+          
+          <td>
+            <p><%= coffee.price %></p>
+          </td>          
+          
+          <td>
+            <a href="#">Enlever de la liste</a>
+          </td>
         </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Espresso</td>
-          <td>2,50 €</td>
-          <td>3</td>
-          <td>7,50 €</td>
-        </tr>
-        <tr>
-          <td>Cappuccino</td>
-          <td>3,00 €</td>
-          <td>2</td>
-          <td>6,00 €</td>
-        </tr>
-        <tr>
-          <td>Latte macchiato</td>
-          <td>3,50 €</td>
-          <td>1</td>
-          <td>3,50 €</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div class="text-right my-4">
-      <h3>Prix total du panier : 17,00 €</h3>
-    </div>
-
-    <div class="text-center my-5">
-      <a href="#" class="btn btn-primary">Commander</a>
-    </div>
-  </div>
+        <% }); %>
+    </tbody>
+  </table> 
 </main>
 <%- include ('../partials/footer') %>

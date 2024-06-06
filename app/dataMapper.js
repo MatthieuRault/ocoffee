@@ -28,7 +28,15 @@ const dataMapper = {
     //   coffee.available = "Non";
     // }
     return coffee;
+  },
+  findCoffeesById: async (coffeeIds) => {
+    const result = await client.query(`SELECT coffee.*, category.name AS cat_name, category.id AS cat_id
+    FROM "coffee" JOIN "category" ON coffee.category_id = category.id
+    WHERE coffee.id = ANY($1::int[])`,
+   [coffeeIds]);
+    const coffees = result.rows;
+    return coffees;   
   }
-}
+};
 
 module.exports = dataMapper;
