@@ -8,8 +8,8 @@ const dataMapper = {
   },
   findCoffeesLimitRandom: async () => {
     const result = await client.query(`SELECT * FROM "coffee" ORDER BY RANDOM() LIMIT 3`);
-    const coffees = result.rows;
-    return coffees
+    const coffees = result.rows;    
+    return coffees;
   },
   findAllCoffees: async () => {
     const result = await client.query(`SELECT * FROM "coffee"`);
