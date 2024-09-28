@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "db:create": "psql -U ocoffee -d ocoffee -f DB/create_db.sql"
+  },
   "dependencies": {
     "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
