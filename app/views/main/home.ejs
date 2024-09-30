@@ -4,37 +4,52 @@
     <div class="intro-focus">
       <div class="intro-text">
         <h1 class="main-title">oCoffee</h1>
-        <p>Jean et Jacques Pepper, deux frères passionnés par le café, sont les fondateurs de notre boutique. Avec une expertise approfondie et un amour profond pour cette délicieuse boisson, ils ont créé un espace où le café est célébré comme une expérience raffinée et inspirante.</p>
+        <p>
+          Jean et Jacques Pepper, deux frères passionnés par le café, sont les
+          fondateurs de notre boutique. Avec une expertise approfondie et un
+          amour profond pour cette délicieuse boisson, ils ont créé un espace où
+          le café est célébré comme une expérience raffinée et inspirante.
+        </p>
         <a href="catalogue" target="_blank">
           <button class="button-catalogue">Voir le catalogue</button>
         </a>
       </div>
       <figure class="intro-image">
-        <img class="image-about" src="images/about.jpg" alt="Boutique de café" />            
+        <img
+          class="image-about"
+          src="images/about.jpg"
+          alt="Boutique de café"
+        />
       </figure>
     </div>
-  </article>      
+  </article>
   <section class="new-products">
     <header>
       <h2 class="section-title">Nouveautés</h2>
     </header>
     <div class="product-list">
-      <% randomCoffees.forEach(coffee => { %>      
-        <article class="product-card">
-          <header class="card-header">
-            <img class="product-image" src="images/coffees/<%= coffee.reference %>.png" alt="<%= coffee.name %>" />
-            <h3 class="product-title"><%= coffee.name %></h3>
-          </header>
-          <section class="card-content">
-            <p><%= coffee.description %></p>
-          </section>
-          <footer class="card-footer">
-            <a href="article/<%= coffee.id %>" target="_blank">
-              <button class="card-button">Découvrir</button>
-            </a>
-            <a href="/boutique/add/<%= coffee.id %>">+ Ajouter au panier</a>
-          </footer>
-        </article>     
+      <% randomCoffees.forEach(coffee => { %>
+      <article class="product-card">
+        <header class="card-header">
+          <img
+            class="product-image"
+            src="images/coffees/<%= coffee.reference %>.png"
+            alt="<%= coffee.name %>"
+          />
+          <h3 class="product-title"><%= coffee.name %></h3>
+        </header>
+        <section class="card-content">
+          <p><%= coffee.description %></p>
+        </section>
+        <footer class="card-footer">
+          <a href="article/<%= coffee.id %>" target="_blank">
+            <button class="card-button">Découvrir</button>
+          </a>
+          <a href="/boutique/add/<%= coffee.id %>" class="add-to-cart"
+            ><span>+ Ajouter au panier</span></a
+          >
+        </footer>
+      </article>
       <% }) %>
     </div>
   </section>

@@ -1,3 +1,4 @@
+SET client_encoding TO 'UTF8';
 -- Début d'une transaction, permet d'essayer de faire les instructions en cas de problême == rollback
 BEGIN;
 
