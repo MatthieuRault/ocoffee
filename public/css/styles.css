@@ -309,6 +309,11 @@ th {
   .add-to-cart::before {
     content: "+";
   }
+
+  .card-content {
+    text-align: center;
+    width: 80%;
+  }
 }
 
 /* responsive mobile et tablette */
@@ -399,6 +404,10 @@ header nav.expanded ul {
 
 header nav.expanded a {
   color: inherit;
+}
+
+footer p {
+  padding-top: 0.8rem;
 }
 
 /* Responsive Desktop */
