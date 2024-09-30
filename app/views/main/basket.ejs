@@ -1,33 +1,37 @@
 <%- include ('../partials/header') %>
-<main> 
-  <h2 class="h2-basket">Votre panier de café</h2>  
+<main>
+  <h2 class="h2-basket">Votre panier de café</h2>
   <table class="table">
     <thead>
       <tr>
         <th>Nom du café</th>
         <th>Prix au kg</th>
-        <th></th>          
+        <th></th>
       </tr>
     </thead>
     <tbody>
-      <% coffees.forEach(coffee => { %>        
-        <tr>          
-          <td>            
-            <div>
-              <img class="product-image basket" src="images/coffees/<%= coffee.reference %>.png" alt="<%= coffee.name %>" />
-              <h3><%= coffee.name %></h3>
-            </div>
-          </td>
-          
-          <td>
-            <p><%= coffee.price_kg %> €</p>
-          </td>
-          
-          <td>
-            <a href="/boutique/delete/<%= coffee.id %>">Retirer de la liste</a>
-          </td>
-        </tr>
-        <% }); %>
+      <% coffees.forEach(coffee => { %>
+      <tr>
+        <td>
+          <div>
+            <img
+              class="product-image basket"
+              src="images/coffees/<%= coffee.reference %>.webp"
+              alt="<%= coffee.name %>"
+            />
+            <h3><%= coffee.name %></h3>
+          </div>
+        </td>
+
+        <td>
+          <p><%= coffee.price_kg %> €</p>
+        </td>
+
+        <td>
+          <a href="/boutique/delete/<%= coffee.id %>">Retirer de la liste</a>
+        </td>
+      </tr>
+      <% }); %>
     </tbody>
   </table>
   <div class="link-catalog">
