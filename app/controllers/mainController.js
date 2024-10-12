@@ -27,9 +27,7 @@ const mainController = {
       const articleId = parseInt(req.params.id);
       // Si l'ID n'est pas un nombre, on renvoie une erreur 400
       if (isNaN(articleId)) {
-        return res
-          .status(400)
-          .render("error/400", { message: "Mauvaise requête" });
+        return res.status(400).json({ message: "L'ID doit être un nombre" });
       }
       const coffee = await dataMapper.findDetailCoffee(articleId);
       // Si le café n'existe pas, on renvoie une erreur 404
